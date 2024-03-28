@@ -13,6 +13,10 @@
     <artifactId>app</artifactId>
     <version>0.0.1</version>
 
+    <properties>
+        <kafka.client.version>3.7.0</kafka.client.version>
+        <maven.formatter.plugin.version>2.23.0</maven.formatter.plugin.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -73,6 +77,17 @@
             <artifactId>hamcrest-all</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- Kafka -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>${kafka.client.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-streams</artifactId>
+            <version>${kafka.client.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -94,6 +109,11 @@
                         <id>make-index</id>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>net.revelc.code.formatter</groupId>
+                <artifactId>formatter-maven-plugin</artifactId>
+                <version>${maven.formatter.plugin.version}</version>
             </plugin>
         </plugins>
     </build>
