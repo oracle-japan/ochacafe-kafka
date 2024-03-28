@@ -1,0 +1,10 @@
+@localhost = http://localhost:8080
+
+POST {{localhost}}/kafka/topic HTTP/1.1
+Content-Type: application/json
+
+{
+    "topicName": "quickstart-events",
+    "partitions": 1,
+    "replicationFactor": 1
+}
