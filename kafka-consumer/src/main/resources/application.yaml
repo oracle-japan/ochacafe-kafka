@@ -1,0 +1,20 @@
+server:
+  port: 8081
+  host: 0.0.0.0
+
+metrics:
+  rest-request:
+    enabled: false
+
+mp.messaging:
+  incoming.from-kafka:
+    connector: helidon-kafka
+    topic: my-topic
+    auto.offset.reset: latest
+    enable.auto.commit: true
+    group.id: ochacafe-group
+  connector:
+    helidon-kafka:
+      bootstrap.servers: localhost:9092
+      key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value.deserializer: org.apache.kafka.common.serialization.StringDeserializer
