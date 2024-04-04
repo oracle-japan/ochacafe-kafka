@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  host: 0.0.0.0
+
+metrics:
+  rest-request:
+    enabled: false
+
+mp.messaging:
+  outgoing.to-kafka:
+    connector: helidon-kafka
+    topic: my-topic
+  connector:
+    helidon-kafka:
+      bootstrap.servers: "localhost:9092"
+      key.serializer: org.apache.kafka.common.serialization.StringSerializer
+      value.serializer: org.apache.kafka.common.serialization.StringSerializer

@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: kafka-producer
+  labels:
+    app: kafka-producer
+spec:
+  type: NodePort
+  selector:
+    app: kafka-producer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    name: http
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: kafka-producer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-producer
+  template:
+    metadata:
+      labels:
+        app: kafka-producer
+        version: v1
+    spec:
+      containers:
+      - name: kafka-producer
+        image: kafka-producer
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
