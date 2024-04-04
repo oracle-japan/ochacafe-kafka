@@ -1,2 +1,5 @@
 .vscode
 target/
+lib/
+scripts/start-consumer.sh
+scripts/start-producer.sh
