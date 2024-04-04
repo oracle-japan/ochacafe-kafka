@@ -4,3 +4,11 @@ services:
     image: apache/kafka:3.7.0
     ports:
       - 9092:9092
+  openobserve:
+    container_name: openobserve
+    image: public.ecr.aws/zinclabs/openobserve:latest
+    ports:
+      - 5080:5080
+    environment:
+      - ZO_ROOT_USER_EMAIL=${USER_EMAIL}
+      - ZO_ROOT_USER_PASSWORD=${USER_PASSWORD}
