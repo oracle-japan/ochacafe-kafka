@@ -1,0 +1,13 @@
+#!/bin/bash
+
+export OTEL_SERVICE_NAME=kafka-consumer
+export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=
+export OTEL_METRICS_EXPORTER=none
+export OTEL_LOGS_EXPORTER=none
+export OTEL_EXPORTER_OTLP_HEADERS=
+export OTEL_EXPORTER_OTLP_TRACES_HEADERS=
+export OTEL_INSTRUMENTATION_MESSAGING_EXPERIMENTAL_RECEIVE-TELEMETRY_ENABLED=true
+
+cd ../kafka-consumer
+helidon dev \
+    --app-jvm-args "-javaagent:../lib/opentelemetry-javaagent.jar"
