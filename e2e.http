@@ -1,0 +1,14 @@
+@producer = http://localhost:8080
+@consumer = http://localhost:8081
+
+#####
+# @name produce
+POST {{producer}}/kafka/produce HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Landscape of NewSQL",
+    "speaker": "Yutaka Ichikawa",
+    "date": "2024-05-08 19:00"
+}
+
