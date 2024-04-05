@@ -9,7 +9,7 @@ metrics:
 mp.messaging:
   outgoing.to-kafka:
     connector: helidon-kafka
-    topic: my-topic
+    topic: ochacafe-event
   connector:
     helidon-kafka:
       bootstrap.servers: "localhost:9092"

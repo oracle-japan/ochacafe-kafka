@@ -18,8 +18,8 @@ public class ProducerResource {
     @POST
     @Path("produce")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Message produce(Message message) {
-        producerService.process(message);
+    public Message produce(Event event) {
+        producerService.process(event);
         return new Message("ack");
     }
 }

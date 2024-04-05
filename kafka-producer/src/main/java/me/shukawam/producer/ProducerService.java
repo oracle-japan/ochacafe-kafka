@@ -22,7 +22,7 @@ public class ProducerService {
                 .buildRs();
     }
 
-    public void process(Message message) {
-        publisher.submit(message.getMessage());
+    public void process(Event event) {
+        publisher.submit(event.toString());
     }
 }
