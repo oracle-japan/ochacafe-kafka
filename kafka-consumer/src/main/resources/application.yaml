@@ -9,7 +9,7 @@ metrics:
 mp.messaging:
   incoming.from-kafka:
     connector: helidon-kafka
-    topic: my-topic
+    topic: ochacafe-event
     auto.offset.reset: latest
     enable.auto.commit: true
     group.id: ochacafe-group
