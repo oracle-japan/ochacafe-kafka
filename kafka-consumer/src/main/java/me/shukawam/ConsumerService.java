@@ -8,7 +8,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 /**
  * Kafka consumer implemented by MicroProfile Reactive Messaging
- * 
+ *
  * @author shukawam
  */
 @ApplicationScoped

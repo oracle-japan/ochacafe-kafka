@@ -33,17 +33,13 @@ class MainTest {
 
     @Test
     void testMicroprofileMetrics() {
-        String message = target.path("simple-greet/Joe")
-                .request()
-                .get(String.class);
+        String message = target.path("simple-greet/Joe").request().get(String.class);
 
         assertThat(message, is("Hello Joe"));
         Counter counter = registry.counter("personalizedGets");
         double before = counter.getCount();
 
-        message = target.path("simple-greet/Eric")
-                .request()
-                .get(String.class);
+        message = target.path("simple-greet/Eric").request().get(String.class);
 
         assertThat(message, is("Hello Eric"));
         double after = counter.getCount();
@@ -52,10 +48,7 @@ class MainTest {
 
     @Test
     void testHealth() {
-        Response response = target
-                .path("health")
-                .request()
-                .get();
+        Response response = target.path("health").request().get();
         assertThat(response.getStatus(), is(200));
     }
 

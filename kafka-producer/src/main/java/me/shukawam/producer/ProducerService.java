@@ -17,9 +17,7 @@ public class ProducerService {
 
     @Outgoing("to-kafka")
     public Publisher<String> produce() {
-        return ReactiveStreams
-                .fromPublisher(FlowAdapters.toPublisher(Multi.create(publisher)))
-                .buildRs();
+        return ReactiveStreams.fromPublisher(FlowAdapters.toPublisher(Multi.create(publisher))).buildRs();
     }
 
     public void process(Event event) {
