@@ -1,5 +1,6 @@
 .vscode
 target/
 lib/
-scripts/start-consumer.sh
-scripts/start-producer.sh
+scripts/start-local-consumer.sh
+scripts/start-local-producer.sh
+scripts/start-load-generator.sh
