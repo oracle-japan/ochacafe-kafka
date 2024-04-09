@@ -9,7 +9,7 @@ spec:
   roles:
     - controller
   storage:
-    type: ephemeral
+    type: ephemeral # for demo
 ---
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaNodePool
@@ -22,7 +22,7 @@ spec:
   roles:
     - broker
   storage:
-    type: ephemeral
+    type: ephemeral # for demo
 ---
 apiVersion: kafka.strimzi.io/v1beta2
 kind: Kafka
