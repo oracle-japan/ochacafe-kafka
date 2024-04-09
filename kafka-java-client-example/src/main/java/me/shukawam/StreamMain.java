@@ -51,8 +51,7 @@ public class StreamMain {
 
         final KTable<String, Long> counts = source
                 .flatMapValues(value -> Arrays.asList(value.toLowerCase(Locale.getDefault()).split("\\W+")))
-                .groupBy((key, value) -> value)
-                .count();
+                .groupBy((key, value) -> value).count();
 
         // need to override value serde to Long type
         counts.toStream().to(OUTPUT_TOPIC, Produced.with(Serdes.String(), Serdes.Long()));
