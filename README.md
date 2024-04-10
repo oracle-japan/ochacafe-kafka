@@ -27,15 +27,12 @@ tree -D -L 1
 
 ### Kafka Java Client を用いた 基本操作
 
-TODO: 書きかけです！
 [docs/02_getting_started_kafka_with_java_client](https://github.com/oracle-japan/ochacafe-kafka/blob/main/docs/02_getting_started_kafka_with_java_client.md) をご参照ください。
 
 ### Strimzi を用いた Kubernetes 上への Kafka クラスタの展開
 
-TODO: 書きかけです！
 [docs/03_kafka_on_kubernetes](https://github.com/oracle-japan/ochacafe-kafka/blob/main/docs/03_kafka_on_kubernetes.md) をご参照ください。
 
 ### Kafka を介した Producer/Subscriber 間の分散トレーシング
 
-TODO: 書きかけです！
 [docs/04_kafka_distributed_tracing](https://github.com/oracle-japan/ochacafe-kafka/blob/main/docs/04_kafka_distributed_tracing.md) をご参照ください。
