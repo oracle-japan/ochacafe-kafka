@@ -6,4 +6,3 @@ $KAFKA_HOME/bin/kafka-console-consumer.sh \
     --topic quickstart-event \
     --bootstrap-server localhost:9092 \
     --from-beginning
-

@@ -6,4 +6,3 @@ $KAFKA_HOME/bin/kafka-topics.sh \
     --describe \
     --topic quickstart-event \
     --bootstrap-server localhost:9092
-
